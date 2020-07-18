@@ -1,0 +1,5 @@
+const fs = require('fs')
+
+// fs.writeFileSync('notes.txt', 'This file was created by Node JS')
+
+fs.appendFileSync('notes.txt', '. This is a new messege appended')

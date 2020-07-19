@@ -1,5 +1,7 @@
-const fs = require('fs')
+// const add = require('./utils');  //we are exporting the name from utils.js
+// const sum = add(3,4);
+// console.log(sum);
 
-// fs.writeFileSync('notes.txt', 'This file was created by Node JS')
-
-fs.appendFileSync('notes.txt', '. This is a new messege appended')
+let getNotes = require('./notes');
+const note = getNotes('morning this is my first msg');
+console.log(note);

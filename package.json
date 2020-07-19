@@ -1,0 +1,22 @@
+{
+  "name": "notes-app-nodejs",
+  "version": "1.0.0",
+  "description": "Will be working node JS file and module system",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SanjayTalyaOfficial/notes-app-nodeJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SanjayTalyaOfficial/notes-app-nodeJS/issues"
+  },
+  "homepage": "https://github.com/SanjayTalyaOfficial/notes-app-nodeJS#readme",
+  "dependencies": {
+    "validator": "^10.8.0"
+  }
+}

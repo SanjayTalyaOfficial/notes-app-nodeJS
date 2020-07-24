@@ -1,14 +1,11 @@
+const chalk = require('chalk')
+const yargs = require('yargs')
+const notes = require('./notes.js')
 
-let getNotes = require('./notes');
-const chalk = require('chalk');
-const yargs = require('yargs');
-
-// customise yargs version 
+// Customize yargs version
 yargs.version('1.1.0')
 
-// we want the app to add, remove, read and list
-
-// create a add command
+// Create add command
 yargs.command({
     command: 'add',
     describe: 'Add a new note',
@@ -19,43 +16,41 @@ yargs.command({
             type: 'string'
         },
         body: {
-            describe: 'Note description',
+            describe: 'Note body',
             demandOption: true,
             type: 'string'
         }
     },
     handler: function (argv) {
-        console.log('Title: ' +argv.title)
-        console.log('Description: '+argv.body)
+        notes.addNote(argv.title, argv.body)
     }
 })
 
-//create a remove command
+// Create remove command
 yargs.command({
     command: 'remove',
     describe: 'Remove a note',
     handler: function () {
-        console.log('Removing a note!')
+        console.log('Removing the note')
     }
 })
 
-// Create a list command
+// Create list command
 yargs.command({
     command: 'list',
-    describe: 'Show the list of notes',
+    describe: 'List your notes',
     handler: function () {
-        console.log('There are the list of functions')
+        console.log('Listing out all notes')
     }
 })
 
-// Create a read command
+// Create read command
 yargs.command({
     command: 'read',
-    describe: 'read the note',
+    describe: 'Read a note',
     handler: function () {
-        console.log('Reading the notes')
+        console.log('Reading a note')
     }
 })
-yargs.parse()
 
- console.log(yargs.argv)
+yargs.parse()
